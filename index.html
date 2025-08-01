@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthGuide - Your Personal Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- This new navbar will be static on the landing page -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">HealthGuide</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutdoc.html">About Doctors</a>
+        </div>
+    </nav>
+
+    <!-- NEW: Full-screen Hero Section -->
+    <section class="hero-image-section">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1 class="hero-main-title">  WELCOME TO HEALTHGUIDE<br></h1>
+                <p class="hero-description">Your personal Health Assistant.</p>
+                <div class="search-box">
+                    <a href="dashboard.html" class="button-primary hero-cta-button">Start Your Journey Now</a>
+                    
+                </div>
+            </div>
+            <!-- The image is set as a background in CSS for responsiveness -->
+        </div>
+    </section>
+
+    <!-- The old landing page content goes here, for when the user scrolls -->
+    <main class="home-content-wrapper-scrolled">
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="aboutdoc.html">About Our Doctors</a></li>
+            </ul>
+        </aside>
+        
+
+        <div class="main-content-area">
+            <!-- RESTORED: PERSONALIZED INSIGHTS SECTION -->
+            
+            <!-- END OF RESTORED SECTION -->
+              <!-- SYMPTOM CHECKER SECTION -->
+            <section class="feature-highlight symptom-checker-section">
+                <h2>🔍 Symptom Checker</h2>
+                <p>Tell us your symptoms, and we'll suggest possible conditions or advise on next steps.</p>
+                <div class="symptom-input-area">
+                    <textarea id="symptomInput" placeholder="Enter your symptoms here, separated by commas (e.g., fever, headache, cough)" rows="4"></textarea>
+                    <button id="checkSymptomsBtn" class="button-primary">Check Symptoms</button>
+                </div>
+                <div id="symptomResults" class="symptom-results">
+                    <!-- Results will be displayed here by JavaScript -->
+                </div>
+            </section>
+            <!-- END OF SYMPTOM CHECKER SECTION -->
+
+            <!-- MEDICINE DIRECTORY SECTION -->
+            <section class="feature-highlight medicine-directory-section">
+                <h2>💊 Medicine Directory</h2>
+                <p>Search for common medicines, their alternatives, and uses.</p>
+                <div class="medicine-search-area">
+                    <input type="text" id="medicineSearchInput" placeholder="Search medicine name or use (e.g., Paracetamol, fever)">
+                    <button id="searchMedicineBtn" class="button-primary">Search Medicine</button>
+                </div>
+                <div id="medicineSearchResults" class="medicine-search-results">
+                    <!-- Search results will be displayed here by JavaScript -->
+                </div>
+            </section>
+            <!-- END OF NEW MEDICINE DIRECTORY SECTION -->
+
+            <section class="feature-highlight">
+                <h2>Track Your Wellness Journey</h2>
+                <p>Monitor your water intake, steps, calories, and more with ease. HealthGuide helps you stay on top of your daily goals.</p>
+                <div class="button-group">
+                    <a href="dashboard.html" class="button-primary">Go to Dashboard</a>
+            </section>
+            
+
+           
+             <section class="feature-highlight personalized-insights-section">
+                <h2>✨ Your Daily Insights</h2>
+                <div id="dynamicInsights">
+                    <!-- Insights will be loaded here by JavaScript -->
+                    <p>Loading your personalized insights...</p>
+                </div>
+                <button id="refreshInsightsBtn" class="button-primary refresh-btn">Refresh Insights</button>
+            </section>
+
+            
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthGuide. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js" defer></script>
+</body>
+</html>

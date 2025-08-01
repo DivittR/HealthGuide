@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Doctors - HealthGuide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">HealthGuide</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="contact.html">Contact</a>
+            <a href="about-doctors.html">About Doctors</a>
+        </div>
+    </nav>
+
+    <main class="about-page-container">
+        <header class="about-header">
+            <h1>Meet Our Dedicated Team</h1>
+            <p>Compassionate care from experienced professionals committed to your well-being.</p>
+        </header>
+
+        <section class="doctors-section">
+            <h2>Our Expert Medical Team</h2>
+            <div class="doctors-grid">
+                <!-- Doctor Card 1 -->
+                <div class="doctor-card">
+                    <img src="https://placehold.co/150x150/4CAF50/FFFFFF?text=Dr.+A" alt="Dr. A" class="doctor-photo">
+                    <div class="doctor-info">
+                        <h3>Dr. A </h3>
+                        
+                    </div>
+                </div>
+
+                <!-- Doctor Card 2 -->
+                <div class="doctor-card">
+                    <img src="https://placehold.co/150x150/4CAF50/FFFFFF?text=Dr.+B" alt="Dr. Maria Lopez" class="doctor-photo">
+                    <div class="doctor-info">
+                        <h3>Dr. B</h3>
+                        
+                    </div>
+                </div>
+
+                <!-- Doctor Card 3 -->
+                <div class="doctor-card">
+                    <img src="https://placehold.co/150x150/4CAF50/FFFFFF?text=Dr.+C" alt="Dr. Ben Carter" class="doctor-photo">
+                    <div class="doctor-info">
+                        <h3>Dr. C</h3>
+                        <!-- Removed: <p class="doctor-specialty">Internal Medicine</p> -->
+                        <!-- Removed: <p class="doctor-bio">Dr. Carter is an expert in internal medicine, focusing on the diagnosis and treatment of diseases in adults. He emphasizes patient education and collaborative decision-making, helping patients understand and manage their health conditions effectively.</p> -->
+                    </div>
+                </div>
+
+                <!-- Doctor Card 4 -->
+                <div class="doctor-card">
+                    <img src="https://placehold.co/150x150/4CAF50/FFFFFF?text=Dr.+D" alt="Dr. Sophia Chen" class="doctor-photo">
+                    <div class="doctor-info">
+                        <h3>Dr. D.</h3>
+                        <!-- Removed: <p class="doctor-specialty">Family Medicine</p> -->
+                        <!-- Removed: <p class="doctor-bio">Dr. Chen is passionate about comprehensive family care, treating patients of all ages. She focuses on preventative health and chronic disease management, building strong relationships with families.</p> -->
+                    </div>
+                </div>
+
+                <!-- Doctor Card 5 -->
+                <div class="doctor-card">
+                    <img src="https://placehold.co/150x150/4CAF50/FFFFFF?text=Dr.+E" alt="Dr. David Kim" class="doctor-photo">
+                    <div class="doctor-info">
+                        <h3>Dr. E.</h3>
+                        <!-- Removed: <p class="doctor-specialty">Cardiology</p> -->
+                        <!-- Removed: <p class="doctor-bio">Dr. Kim is a board-certified cardiologist dedicated to heart health. He provides expert care for various cardiovascular conditions, emphasizing lifestyle modifications and advanced treatment options.</p> -->
+                    
+                </div>
+
+                <!-- Doctor Card 6 -->
+                
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-contact-form">
+            <h2>Contact Our Doctors Directly</h2>
+            <form id="aboutContactForm">
+                <div class="form-group">
+                    <label for="aboutName">Your Name:</label>
+                    <input type="text" id="aboutName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="aboutEmail">Your Email:</label>
+                    <input type="email" id="aboutEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="aboutSubject">Subject:</label>
+                    <input type="text" id="aboutSubject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="aboutMessage">Your Message:</label>
+                    <textarea id="aboutMessage" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="button-primary">Send Message</button>
+                <p id="aboutFormMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthGuide. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for form handling on this page -->
+    <script>
+        document.getElementById('aboutContactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formMessage = document.getElementById('aboutFormMessage');
+            formMessage.textContent = 'Thank you for contacting us! We will review your message.';
+            formMessage.style.color = '#4CAF50'; // Green color for success
+            formMessage.style.marginTop = '15px';
+
+            // In a real application, you would send this data to a server here.
+            // For now, we'll just clear the form.
+            this.reset(); // Clears all form fields
+        });
+    </script>
+</body>
+</html>

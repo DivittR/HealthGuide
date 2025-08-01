@@ -1,0 +1,1083 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2f1ef; /* Soft gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2E8B57; /* Sea Green - professional, calm */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+/* --- Navigation Bar Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F4F4F; /* Dark Slate Gray - deep, professional */
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-brand {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #66CDAA; /* Medium Aquamarine - softer green hover */
+}
+
+/* --- NEW: Hero Section and Scrolled Content Layout --- */
+
+.hero-image-section {
+    min-height: 100vh; /* Full viewport height */
+    background-color: #E0FFFF; /* Light Cyan */
+    background-image: url('images/ChatGPT\ Image\ Aug\ 1\,\ 2025\,\ 02_11_15\ PM.png'); /* CHANGED: Path to your image file */
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Align image to the right and bottom */
+    background-size: contain; /* Ensure the image fits without being cut */
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.hero-content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-text-content {
+    max-width: 50%;
+    padding: 20px;
+}
+
+.hero-main-title {
+    font-size: 4em;
+    font-family: "Times New Roman", Times, serif;
+    color: #2F4F4F; /* Dark Slate Gray */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* The old content container for when the user scrolls */
+.home-content-wrapper-scrolled {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .hero-text-content {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image-section {
+        background-position: center bottom;
+        background-size: cover;
+    }
+    .hero-text-content {
+        max-width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .search-box {
+        justify-content: center;
+    }
+    .hero-main-title {
+        font-size: 2.5em;
+    }
+
+    .home-content-wrapper-scrolled {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sidebar {
+        position: static;
+    }
+}
+
+
+
+.button-primary {
+    display: inline-block;
+    background-color: #3CB371; /* Medium Sea Green - professional green */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #2E8B57; /* Sea Green */
+}
+
+.landing-content { /* This class is now used on main-content-area */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-highlight {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.feature-highlight h2 {
+    color: #4682B4; /* Steel Blue - professional blue heading */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.feature-highlight p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Ensure main content has top margin to clear fixed nav if you make it fixed later */
+main {
+    margin-top: 0; /* Adjust if navbar becomes fixed */
+}
+
+/* --- Home Page Layout with Sidebar --- */
+.home-content-wrapper {
+    display: flex; /* Use flexbox to put sidebar and main content side-by-side */
+    max-width: 1200px; /* Max width for the entire content area */
+    margin: 20px auto; /* Center the wrapper */
+    padding: 0 20px; /* Padding on sides */
+    gap: 30px; /* Space between sidebar and main content */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.sidebar {
+    flex: 0 0 220px; /* Fixed width sidebar, not growing/shrinking */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    position: sticky; /* Make sidebar sticky when scrolling */
+    top: 20px; /* Distance from the top when sticky */
+}
+
+.sidebar h3 {
+    color: #4682B4; /* Steel Blue */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #E0FFFF; /* Light Cyan */
+    color: #4682B4; /* Steel Blue */
+}
+
+.main-content-area {
+    flex-grow: 1; /* Allows main content to take up remaining space */
+    min-width: 0; /* Prevents overflow issues with flex-grow */
+}
+
+/* Symptom Checker Section Specific Styles */
+.symptom-checker-section {
+    background-color: #F0F8FF; /* Alice Blue - very light blue */
+    border: 1px solid #B0E0E6; /* Powder Blue */
+}
+
+.symptom-input-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#symptomInput {
+    width: 80%; /* Adjust as needed, or use max-width */
+    max-width: 600px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#checkSymptomsBtn {
+    /* Uses existing .button-primary styles, but you could add more here */
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+.symptom-results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #B0E0E6; /* Powder Blue */
+    border-radius: 8px;
+    text-align: left;
+    min-height: 50px; /* Give some initial height */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.symptom-results h3 {
+    color: #4682B4; /* Steel Blue */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.symptom-results ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.symptom-results ul li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.symptom-results .recommendation {
+    font-weight: bold;
+    color: #CD5C5C; /* Indian Red - softer red */
+    font-size: 1.1em;
+}
+
+/* Symptom Checker Contact Button */
+.contact-doctor-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #B0E0E6; /* Powder Blue */
+    text-align: center;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4682B4; /* Steel Blue */
+}
+
+.contact-btn:hover {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+/* --- Styles for the new About Doctors Page --- */
+.about-page-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Page Header */
+.about-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #B0E0E6; /* Powder Blue */
+}
+
+.about-header h1 {
+    font-size: 2.8em;
+    color: #fbffff; /* Dark Slate Gray */
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.2em;
+    color: #eae8e8;
+}
+
+/* --- Doctor Profiles Grid Section --- */
+.doctors-section {
+    padding: 40px 20px;
+    background-color: #F0F8FF; /* Alice Blue */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.doctors-section h2 {
+    font-size: 2.5em;
+    color: #2F4F4F; /* Dark Slate Gray */
+    margin-bottom: 30px;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 30px; /* Space between doctor cards */
+    max-width: 1200px; /* Max width for the grid itself */
+    margin: 0 auto;
+    align-items: start; /* Align grid items to the start (top) of their cell */
+}
+
+.doctor-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    padding: 25px;
+    display: flex;
+    flex-direction: row; /* Arranges items in a row */
+    align-items: flex-start; /* Aligns items to the start (top) within the card */
+    text-align: left; /* Aligns text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px; /* Space between image and text */
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-photo {
+    width: 100px; /* Adjusted image size for row layout */
+    height: 100px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border: 4px solid #3CB371; /* Medium Sea Green - professional green border around photo */
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.doctor-info {
+    flex-grow: 1; /* Allows info to take up remaining space */
+    display: flex; /* Use flexbox for inner content */
+    flex-direction: column; /* Stack name and degree vertically */
+    justify-content: flex-start; /* Align content to the start (top) within doctor-info */
+}
+
+.doctor-info h3 {
+    font-size: 1.5em; /* Adjusted font size */
+    color: #4682B4; /* Steel Blue */
+    margin-top: 0; /* Ensure no top margin pushing content down */
+    margin-bottom: 5px; /* Reduced margin */
+    line-height: 1.2; /* Improve line spacing for name/degree */
+}
+
+/* --- Contact Page Specific Styles --- */
+.page-header {
+    background-color: #E0FFFF; /* Light Cyan */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid #B0E0E6; /* Powder Blue */
+}
+
+.page-header h1 {
+    font-size: 2.5em;
+    color: #2F4F4F; /* Dark Slate Gray */
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.form-message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Symptom Checker Contact Button */
+.contact-doctor-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #B0E0E6; /* Powder Blue */
+    text-align: center;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4682B4; /* Steel Blue */
+}
+
+.contact-btn:hover {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+/* Contact Form on About Page - Reuse existing form styles but adjust container */
+.about-contact-form {
+    max-width: 600px; /* Smaller width for this form */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #B0E0E6; /* Powder Blue */
+}
+
+.about-contact-form h2 {
+    text-align: center;
+    color: #3CB371; /* Medium Sea Green */
+    margin-bottom: 25px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+}
+
+/* Card Styling (General for all dashboard cards) */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    width: 280px; /* Fixed width for cards */
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.card h2 {
+    color: #3CB371; /* Medium Sea Green */
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: center; /* Center buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px; /* Space above the buttons */
+}
+
+/* Button Styling (general) */
+button {
+    background-color: #4682B4; /* Steel Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+/* Reset Button Specific Styling */
+.reset-btn {
+    background-color: #CD5C5C; /* Indian Red */
+}
+
+.reset-btn:hover {
+    background-color: #E9967A; /* Dark Salmon */
+}
+
+/* Progress Bar Styling */
+.progress-bar-container {
+    width: 100%;
+    height: 15px;
+    background-color: #E0E0E0; /* Light Gray */
+    border-radius: 8px;
+    margin-top: 15px;
+    overflow: hidden; /* Ensures the fill stays within the container's rounded corners */
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0; /* Starts at 0% and will be updated by JavaScript */
+    background-color: #6A5ACD; /* Slate Blue - warmer blue for progress */
+    transition: width 0.3s ease; /* Smooth transition for visual effect */
+}
+
+/* Optional: Styling for when the goal is met */
+.progress-bar-fill.goal-met {
+    background-color: #3CB371; /* Medium Sea Green */
+}
+
+/* Styling for Calorie Card specific elements */
+.calorie-card input[type="number"],
+.calorie-card input[type="text"] {
+    width: calc(100% - 20px); /* Adjust width considering padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+.calorie-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left; /* Align list items to the left */
+    max-height: 150px; /* Limit height for scrolling if many items */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-top: 1px solid #B0E0E6; /* Powder Blue */
+    padding-top: 10px;
+}
+
+.calorie-card ul li {
+    background-color: #F0F8FF; /* Alice Blue */
+    border: 1px solid #B0E0E6; /* Powder Blue */
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex; /* For potential future delete button */
+    justify-content: space-between; /* To space out meal name and calories */
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.calorie-card h3 {
+    margin-top: 20px;
+    color: #3CB371; /* Medium Sea Green */
+    font-size: 1.2em;
+}
+
+/* Style for the delete button next to meal items */
+.meal-item-delete {
+    background-color: #CD5C5C; /* Indian Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-left: 10px; /* Space from meal text */
+    transition: background-color 0.2s ease;
+}
+
+.meal-item-delete:hover {
+    background-color: #E9967A; /* Dark Salmon */
+}
+
+/* Meal Planner Card Styles */
+.meal-planner-card {
+    /* Inherits general .card styles */
+    text-align: left; /* Align content to left for better form/list readability */
+}
+
+.meal-planner-card .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.meal-planner-card .radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.meal-planner-card .radio-group label {
+    font-weight: normal; /* Override bold from .form-group label */
+    color: #555;
+    margin-bottom: 0;
+}
+
+.meal-planner-card input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.meal-planner-card .button-primary {
+    width: 100%; /* Make button full width */
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.meal-plan-results {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.meal-plan-results h3 {
+    text-align: center;
+    color: #3CB371; /* Medium Sea Green */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.meal-plan-list {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 100px; /* Ensure some height for results */
+}
+
+.meal-plan-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.meal-plan-item:last-child {
+    margin-bottom: 0;
+}
+
+.meal-plan-item .meal-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.meal-plan-item .meal-details strong {
+    color: #2F4F4F; /* Dark Slate Gray */
+    font-size: 1.1em;
+}
+
+.meal-plan-item .meal-details .calories {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+}
+
+.meal-plan-item .add-to-tracker-btn {
+    background-color: #4682B4; /* Steel Blue */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease;
+}
+
+.meal-plan-item .add-to-tracker-btn:hover {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+
+
+/* --- Medicine Directory Section Styles (on index.html) --- */
+.medicine-directory-section {
+    background-color: #F0F8FF; /* Alice Blue */
+    border: 1px solid #B0E0E6; /* Powder Blue */
+}
+
+.medicine-search-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#medicineSearchInput {
+    width: 80%; /* Adjust as needed, or use max-width */
+    max-width: 600px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+#searchMedicineBtn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+.medicine-search-results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #B0E0E6; /* Powder Blue */
+    border-radius: 8px;
+    text-align: left;
+    min-height: 50px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.medicine-search-results h3 {
+    color: #4682B4; /* Steel Blue */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.medicine-search-results ul {
+    list-style: none; /* No bullets for cleaner list */
+    padding-left: 0;
+}
+
+.medicine-search-results ul li {
+    background-color: #F0F8FF; /* Alice Blue */
+    border: 1px solid #B0E0E6; /* Powder Blue */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.medicine-search-results ul li strong {
+    color: #2F4F4F; /* Dark Slate Gray */
+}
+
+.medicine-search-results ul li .medicine-use,
+.medicine-search-results ul li .medicine-category {
+    font-size: 0.9em;
+    color: #555;
+    display: block; /* Ensure they appear on new lines */
+    margin-top: 3px;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjustments for general about page container */
+    .about-page-container {
+        margin: 20px 15px; /* Reduce side margins on smaller screens */
+        padding: 15px;
+    }
+
+    .about-header h1 {
+        font-size: 2em;
+    }
+
+    .about-header p {
+        font-size: 1em;
+    }
+
+    .doctors-section h2 {
+        font-size: 2em;
+    }
+
+    /* Doctor cards stack vertically on small screens */
+    .doctor-card {
+        flex-direction: column; /* Stack back to column on small screens */
+        text-align: center; /* Center text when stacked */
+        gap: 15px; /* Adjust gap for column layout */
+        align-items: center; /* Center items when stacked vertically */
+    }
+
+    .doctor-photo {
+        width: 120px; /* Slightly larger photo when stacked */
+        height: 120px;
+    }
+
+    .doctor-info h3 {
+        font-size: 1.5em;
+    }
+
+    /* Home page sidebar and main content stacking */
+    .home-content-wrapper {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        position: static; /* No longer sticky on small screens */
+        top: auto;
+    }
+
+    /* Symptom/Medicine input areas */
+    #symptomInput, #medicineSearchInput {
+        width: 100%; /* Take full width on small screens */
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctors-section {
+        padding: 20px 10px;
+    }
+
+    .doctor-card {
+        padding: 20px;
+    }
+
+    .hero-section {
+        padding: 50px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1.1em;
+    }
+}
+/* Meal Planner Card Styles */
+.meal-planner-card {
+    /* Inherits general .card styles */
+    text-align: left; /* Align content to left for better form/list readability */
+}
+
+.meal-planner-card .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.meal-planner-card .radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.meal-planner-card .radio-group label {
+    font-weight: normal; /* Override bold from .form-group label */
+    color: #555;
+    margin-bottom: 0;
+}
+
+.meal-planner-card input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.meal-planner-card .button-primary {
+    width: 100%; /* Make button full width */
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.meal-plan-results {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.meal-plan-results h3 {
+    text-align: center;
+    color: #3CB371; /* Medium Sea Green */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.meal-plan-list {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 100px; /* Ensure some height for results */
+}
+
+.meal-plan-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.meal-plan-item:last-child {
+    margin-bottom: 0;
+}
+
+.meal-plan-item .meal-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.meal-plan-item .meal-details strong {
+    color: #2F4F4F; /* Dark Slate Gray */
+    font-size: 1.1em;
+}
+
+.meal-plan-item .meal-details .calories {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+}
+
+.meal-plan-item .add-to-tracker-btn {
+    background-color: #4682B4; /* Steel Blue */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s ease;
+}
+
+.meal-plan-item .add-to-tracker-btn:hover {
+    background-color: #5F9EA0; /* Cadet Blue */
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+
+
+

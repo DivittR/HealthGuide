@@ -1,0 +1,34 @@
+[
+    [
+        {
+            "disease": "Common cold",
+            "overTheCounterMeds": "Rest, fluids, over-the-counter pain relievers",
+            "risk_rating": "1"
+        },
+        {
+            "disease": "Influenza",
+            "overTheCounterMeds": "Rest, fluids, over-the-counter pain relievers",
+            "risk_rating": "3"
+        },
+        {
+            "disease": "Gastroenteritis",
+            "overTheCounterMeds": "Oral rehydration salts, anti-diarrheal medication",
+            "risk_rating": "2"
+        },
+        {
+            "disease": "Urinary Tract Infection (UTI)",
+            "overTheCounterMeds": "Over-the-counter pain relievers, cranberry supplements (may help prevent future UTIs)",
+            "risk_rating": "4"
+        },
+        {
+            "disease": "Menstrual disorders (e.g., endometriosis, fibroids)",
+            "overTheCounterMeds": "Pain relievers, heating pads",
+            "risk_rating": "6"
+        },
+        {
+            "disease": "Pituitary adenoma (if third eye symptom refers to visual disturbances)",
+            "overTheCounterMeds": "None, requires medical attention",
+            "risk_rating": "7"
+        }
+    ]
+]

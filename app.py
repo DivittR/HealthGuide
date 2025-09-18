@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-api_key = "AIzaSyC1At4jLRY6zTVpJ120n214pwZUPH4-E-8"
+api_key = ""
 
 # Your original function, adapted to be used by the Flask app
 def sendPrompt(symptoms: str):
@@ -73,3 +73,4 @@ if __name__ == '__main__':
     #         print("Error while saving output")
     # print(llm_response)
    app.run(port=5000, debug=True)
+
